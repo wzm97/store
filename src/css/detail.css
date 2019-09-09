@@ -1,0 +1,472 @@
+section{
+    width: 980px;
+    margin: 0 auto;
+}
+
+/* 标题 */
+.detailBox .detail_title{
+    height: 77px;
+    color: #abadae;
+    font-size: 14px;
+    line-height: 77px;
+}
+.detailBox .detail_title a{
+    color: #333;
+}
+.detailBox .detail_title a:hover{
+    color: #ff2c72;
+}
+
+/* 商品 */
+
+/* 左边图片 */
+.goodsBox_pic{
+    float: left;
+}
+.goodsBox_pic .goodsPic{
+    position: relative;
+}
+/* 小图 */
+.goodsPic #spic{
+    width: 420px;
+    height: 420px;
+    border: 1px solid #e5e5e5;
+    position: relative;
+}
+.goodsPic #spic img{
+    width: 100%;
+}
+
+/* 小放 */
+#spic #sf{
+    width: 20px;
+    height: 20px;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+}
+
+/* 大图 */
+.goodsPic #bf{
+    width: 420px;
+    height: 420px;
+    border: 1px solid #e5e5e5;
+    position: absolute;
+    left: 440px;
+    top: 0;
+    z-index: 1;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+#bf img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 750px;
+    height: 750px;
+}
+
+/* 分享、喜欢 */
+.goodsBox_pic .operateBox{
+    position: relative;
+    padding: 20px 0 10px;
+}
+
+.operateBox p {
+    float: right;
+    color: #c0c2c3;
+    font-size: 14px;
+}
+
+.operateBox .like span {
+    margin-right: 8px;
+    cursor: pointer;
+    display: inline-block;
+    width: 13px;
+    height: 10px;
+    background: url(../imgs/ico.png) 0 -72px no-repeat;
+}
+.operateBox .share span {
+    display: inline-block;
+    margin-right: 10px;
+    width: 30px;
+    height: 14px;
+    background: url(../imgs/detail_ico.png) no-repeat 0 -85px;
+    vertical-align: middle;
+    cursor: pointer;
+    padding-left: 22px;
+}
+
+/* 下面小图 */
+.picSlide{
+    position: relative;
+}
+.picSlide #picList{
+    width: 376px;
+    margin-left: 45px;
+    overflow: hidden;
+    position: relative;
+}
+.picSlide #picList ul{
+    width: 470px;
+    height: 56px;
+    overflow: hidden;
+    position: relative;
+}
+.picSlide #picList li{
+    width: 94px;
+    float: left;
+}
+.picSlide #picList li img{
+    display: block;
+    padding: 5px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+}
+.picSlide #picList li img.active{
+    border: 1px solid rgb(249, 135, 173);
+}
+/* 左右箭头 */
+.picSlide .pic_arr{
+    position: absolute;
+    top: 8px;
+    width: 17px;
+    height: 30px;
+    background: url(../imgs/detail_ico.png) no-repeat;
+}
+.picSlide .pic_pre{
+    left: 0;
+    background-position: 0 0;
+}
+.picSlide .pic_next{
+    right: 0;
+    background-position: 0 -30px;
+}
+
+/* 中间图片信息 */
+.goodsBox .goodsBox_info {
+    position: relative;
+    float: left;
+    margin-left: 25px;
+    padding-right: 15px;
+    width: 425px;
+    min-height: 508px;
+    border-right: 1px solid #ddd;
+}
+.goodsBox_info .goodsTitle{
+    color: #333739;
+    font-weight: bold;
+    font-size: 16px;
+}
+.goodsBox_info div {
+    margin-top: 15px;
+}
+.goodsBox_info div h4 {
+    display: inline-block;
+    margin-right: 14px;
+    width: 56px;
+    color: #b9bbbc;
+    text-align: left;
+    font-size: 14px;
+    padding-left: 3px;
+}
+.goodsBox_info div p {
+    display: inline-block;
+    color: #616567;
+    font-size: 14px;
+}
+
+/* 艺人 */
+.goodsBox_info .artist a {
+    color: #b9bbbc;
+}
+
+/* 价格 */
+.goodsBox_info .price p {
+    color: #ff2c72;
+    font-weight: bold;
+    font-size: 28px;
+}
+.goodsBox_info .price span.pre {
+    display: inline-block;
+    margin-left: 16px;
+    color: #a1a3a3;
+    text-decoration: line-through;
+    font-weight: 200;
+    font-size: 12px;
+}
+
+/* 重量 数量*/
+.selectBox{
+    position: relative;
+    padding: 18px 0 30px;
+    border-top: 1px solid #f2f2f2;
+    min-height: 200px;
+}
+.selectBox .count{
+    font-size: 0;
+}
+.selectBox .count p {
+    margin-left: 15px;
+    color: #adafb0;
+    font-size: 14px;
+}
+.selectBox .count p i {
+    color: #787a7b;
+}
+.selectBox .count a {
+    display: inline-block;
+    width: 24px;
+    height: 30px;
+    background: #eaeaea;
+    color: #fff;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 20px;
+    line-height: 25px;
+    cursor: pointer;
+}
+.selectBox .count input {
+    width: 42px;
+    height: 28px;
+    border: 1px solid #c9c9c9;
+    color: #333739;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 14px;
+    outline:0;
+}
+
+/* 加入购物车、购买按钮 */
+.divBtns .btnBox button{
+    border: 0;
+    outline: 0;
+}
+.btnBox .addToCart {
+    width: 170px;
+    height: 50px;
+    background: url(../imgs/detail_btn.png) no-repeat -10px -10px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.btnBox .buyNow {
+    margin-right: 10px;
+    width: 170px;
+    height: 50px;
+    background: url(../imgs/detail_btn.png) no-repeat -10px -68px;
+    cursor: pointer;
+}
+
+.divBtns .divzpbz{
+    background: url(../imgs/zpbz.png) no-repeat;
+    width: 201px;
+    height: 18px;
+}
+
+/* 右边相关信息 */
+.goodsBox .goodsBox_rela {
+    position: relative;
+    float: right;
+}
+.goodsBox_rela h3 {
+    margin-bottom: 40px;
+    color: #9a9b9c;
+    text-align: center;
+    font-size: 14px;
+}
+.goodsBox_rela li {
+    position: relative;
+    display: block;
+    margin-bottom: 35px;
+    width: 77px;
+    height: 77px;
+    border: 1px solid #ebebeb;
+}
+.goodsBox_rela li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.goodsBox_rela img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 上下箭头 */
+.goodsBox_rela .next, .goodsBox_rela .prev {
+    position: absolute;
+    left: 28px;
+    width: 20px;
+    height: 10px;
+    background: url(../imgs/detail_ico.png) no-repeat;
+    cursor: pointer;
+}
+
+.goodsBox_rela .prev {
+    top: 42px;
+    background-position: 0 -61px;
+}
+.goodsBox_rela .next {
+    top: 496px;
+    background-position: 0 -75px;
+}
+
+/* 鼠标悬停时左边的盒子 */
+.goodsBox_rela .hoverLook {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    z-index: 2;
+    display: none;
+    width: 348px;
+    height: 174px;
+    border: 2px solid #eaeaea;
+    background-color: #fff;
+}
+.hoverLook .leftpart {
+    float: left;
+    width: 174px;
+    height: 174px;
+}
+.hoverLook .leftpart p.lp_title {
+    overflow: hidden;
+    padding-top: 15px;
+    max-height: 60px;
+    color: #9a9b9c;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+}
+.hoverLook .leftpart p.lp_prize {
+    padding-top: 10px;
+    text-align: center;
+}
+.hoverLook .leftpart p.lp_prize span.now_p {
+    color: #333739;
+    font-size: 18px;
+    line-height: 22px;
+}
+.hoverLook .leftpart p.lp_prize span.pre_p {
+    color: #9a9b9c;
+    text-decoration: line-through;
+    font-size: 12px;
+    line-height: 22px;
+}
+.hoverLook .leftpart .like {
+    padding-top: 22px;
+    text-align: center;
+    color: #b3b3b3;
+}
+.hoverLook .leftpart .like span {
+    display: inline-block;
+    margin-right: 5px;
+    width: 13px;
+    height: 10px;
+    background: url(../imgs/ico.png) 0 -72px no-repeat;
+    cursor: pointer;
+}
+.hoverLook .leftpart .like span:hover{
+    background-position: -13px -72px;
+}
+.hoverLook .rightpart {
+    float: left;
+    width: 174px;
+    height: 174px;
+    cursor: pointer;
+}
+
+/* 鼠标悬停时盒子显示 */
+.related_list .li_list:hover .hoverLook{
+    display: block;
+}
+
+/* 广告 */
+.detailBox .advert{
+    background: url(http://s.yytcdn.com/v2/images/protection/tuangou20190215.jpg) no-repeat;
+    height: 82px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+/* 详细描述 */
+
+/* 标题 */
+.descBox{
+    position: relative;
+}
+.descBox .descBox_title{
+    height: 36px;
+    border: 1px solid #d9d9d9;
+    /* position: fixed; */
+    /* top: 0; */
+    z-index: 200;
+    background: #fff;
+    width: 980px;
+
+}
+.descBox .descBox_title.fixed{
+    position: fixed;
+    top: 0;
+}
+.descBox_title p {
+    position: relative;
+    float: left;
+    padding: 0 13px;
+    cursor: pointer;
+    height: 34px;
+    color: #a1a3a3;
+    font-size: 14px;
+    line-height: 34px;
+}
+.descBox_title p.cur {
+    background: #333739;
+    color: #fff;
+    height: 36px;
+}
+.descBox_title p.cur i {
+    position: absolute;
+    top: 36px;
+    left: 35px;
+    display: block;
+    width: 0;
+    border-top: 5px #333739 solid;
+    border-right: 5px transparent solid;
+    border-left: 5px transparent solid;
+}
+.descBox_title .fixedBtn {
+    float: right;
+    display: none;
+    margin-left: 8px;
+    width: 102px;
+    height: 100%;
+    background: #f63f7c;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    border: 0;
+}
+.descBox_title span {
+    float: right;
+    display: none;
+    color: #333739;
+    font-size: 22px;
+    line-height: 34px;
+}
+
+/* 信息 */
+.descBox .box_info{
+    padding: 20px;
+    /* padding-top: 40px; */
+}
+.descBox .box_info p {
+    padding-bottom: 18px;
+    font-size: 16px;
+}
+
+
+
+

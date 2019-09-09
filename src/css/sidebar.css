@@ -1,0 +1,62 @@
+/* 侧边导航栏 */
+.shopMenu {
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    z-index: 50;
+    margin-left: 590px;
+    width: 62px;
+    height: 241px;
+}
+.shopMenu a {
+    display: block;
+    margin-bottom: 8px;
+    width: 60px;
+    height: 60px;
+    background: url(../imgs/menu.png) no-repeat;
+}
+/* 购物车 */
+.shopMenu a.shopMenu_cart {
+    background-position: -3px -3px;
+}
+#cartNum {
+    position: relative;
+    top: -5px;
+    left: 19px;
+    display: none;
+    width: 22px;
+    height: 23px;
+    background: url(../imgs/cart_num.png) no-repeat -25px 0;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    line-height: 23px;
+}
+.shopMenu a.shopMenu_cart:hover{
+    background-position: -75px -3px;
+}
+.shopMenu a.shopMenu_cart:hover #cartNum{
+    background-position: 0px 0;
+    color: #ff2c72;
+}
+/* 服务 */
+.shopMenu a.shopMenu_service {
+    background-position: -3px -64px;
+}
+.shopMenu a.shopMenu_service:hover{
+    background-position: -75px -64px;
+}
+/* 购物须知 */
+.shopMenu a.shopMenu_notice {
+    background-position: -3px -125px;
+}
+.shopMenu a.shopMenu_notice:hover{
+    background-position: -75px -125px;
+}
+/* 回到顶部 */
+.shopMenu a.return_top {
+    background-position: -3px -186px;
+}
+.shopMenu a.return_top:hover{
+    background-position: -75px -186px;
+}

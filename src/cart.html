@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/repeat.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header></header>
+    <!-- 主体 -->
+    <section>
+        <nav></nav>
+        <div class="area subnav_pd subnav">
+            <h2 class="fl subnav_title">
+                <i class="ico_pay_cart"></i>购物车
+            </h2>
+
+            <div class="fr pay_cart_bread">
+                <span class="fl ico_pay_confirm cur">
+                    <span class="num">1</span>确认商品信息</span>
+                <span class="fl line">-</span>
+                <span class="fl ico_pay_confirm">
+                    <span class="num">2</span>填写订单信息</span>
+            </div>
+        </div>
+        <div class="pay_order">
+            <!-- 购物车信息 -->
+            <ul class="pay_order_list">
+                <li class="list">
+                    <div class="info">
+                        <div class="pay_cart_list">
+                            <table width="918" border="0" cellspacing="0" cellpadding="0">
+                                <tbody class="items_list">
+                                    <tr align="center">
+                                        <td align="left" height="30">购物信息</td>
+                                        <td width="100">数量</td>
+                                        <td width="100">单价</td>
+                                        <td width="120">小计</td>
+                                    </tr>
+                                    <tr class="cart_goods" style="display: none">
+                                        <td>
+                                            <div class="pos">
+                                                <a href="" class="pic shadow" target="_blank">
+                                                    <img src="//img1.c.yinyuetai.com/others/admin/190304/0/-M-9d50f44f1a19410ce22063908aecbff3_200x200.jpg" width="80" height="80"
+                                                        alt="">
+                                                </a>
+                                                <a href="" class="c_6" target="_blank">【全款现货】防弹少年团 BTS x Smart 2019年台历</a>
+                                                <a href="javascript:;" class="ico_close" title="删除">删除</a>
+                                            </div>
+                                        </td>
+                                        <td align="center" class="opera">
+                                            <a href="javascript:;" class="pay_cart_plus J_delete">-</a>
+                                            <input class="input_text pay_cart_num" type="text" value="1">
+                                            <a href="javascript:;" class="pay_cart_minus J_add">+</a>
+                                        </td>
+                                        <td align="center" class="price">
+                                            <p>49.0元</p>
+                                        </td>
+                                        <td width="120" align="center">
+                                            <span class="subTotal">49.0</span>元
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="pay_cart_total">
+                        <span class="num">(不含运费)总计：
+                            <span class="totalMoney"></span>元
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="pay_cart_btn clear">
+                        <a class="fr fb14 pay_btn">下一步</a>
+                        <a href="index.html" class="fr fb14 pay_cancel_btn">继续逛</a>
+                    </div>
+                </li>
+            </ul>
+            <!-- 购物车为空时 -->
+            <div class="cart-empty">
+                <p>购物车内暂时没有商品，您可以
+                    <a class="special" href="index.html">去首页</a>挑选喜欢的商品
+                </p>
+            </div>
+            <!-- 未登陆时，购物车 -->
+            <div class="no-login">
+                <div class="divempty"></div>
+                <p>购物车内暂时没有商品噢，登录后将显示您之前加入的商品~</p>
+                <div class="divbtn">
+                    <div class="special toindex" onclick="javascript:location.href='index.html'">返回首页</div>
+                    <div class="J_login J_shop_login special">立即登录</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 尾部 -->
+    <footer></footer>
+</body>
+<script src="/musicStore/src/js/jquery-1.11.3.js"></script>
+<script src="/musicStore/src/js/cookie.js"></script>
+<script src="/musicStore/src/js/cart.js"></script>
+
+</html>

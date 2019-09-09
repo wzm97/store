@@ -1,0 +1,50 @@
+.footerBox{
+    margin: 60px auto 25px;
+    width: 1200px;
+    height: 57px;
+    background: url(../imgs/footer.png) no-repeat;
+}
+.footer{
+    background: #181818;
+    height: 260px;
+    text-align: center;
+}
+
+/* 上面列表 */
+.footer_link{
+    font-size: 14px;
+    padding: 35px 0 20px;
+    color: #666;
+    display: inline-block;
+}
+.footer_link li{
+    /* float: left; */
+    display: inline;
+}
+.footer_link a{
+    color: #666;
+}
+.footer_link a:hover{
+    color: rgb(26, 221, 36);
+}
+.footer_link .ico_line{
+    width: 2px;
+    height: 10px;
+    margin: 0 8px;
+    display: inline-block;
+    overflow: hidden;
+    background: url(../imgs/ico_index.png) no-repeat -70px 0;
+}
+
+/* 中间版权 */
+.footer_copy,.footer_copy a{
+    color: #999;
+}
+.footer_copy a:hover{
+    color: rgb(26, 221, 36);
+}
+
+/* 下面 */
+.footer p{
+    color: #999;
+}
