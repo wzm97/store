@@ -1,6 +1,6 @@
 !function ($) {
     // 引入头部
-    $("header").load("header.html", function () { 
+    $("header").load("header.html", function () {
         $.getScript('../src/js/header.js', function () {
 
         });
@@ -8,7 +8,7 @@
     // 引入尾部
     $("footer").load("footer.html", function () { })
     //引入侧边导航
-    $("nav").load("sidebar.html", function () { 
+    $("nav").load("sidebar.html", function () {
         $.getScript('../src/js/siderbar.js', function () {
 
         });
@@ -51,22 +51,22 @@
             //将详细描述下的标题栏改为固定定位
 
             //将标题栏的top值保存下来
-            let $boxTop=$('.descBox_title').offset().top;
+            let $boxTop = $('.descBox_title').offset().top;
 
-            $(window).on('scroll',function(){
-                let $top=$(window).scrollTop();
+            $(window).on('scroll', function () {
+                let $top = $(window).scrollTop();
                 // console.log('top'+$top)
                 // console.log('box'+$('.descBox_title').offset().top)
-                if($top>$boxTop){
+                if ($top > $boxTop) {
                     $('.descBox_title').addClass('fixed');
-                    $('.descBox_title .fixedBtn').css('display','block');
-                    $('.descBox_title span').css('display','block');
+                    $('.descBox_title .fixedBtn').css('display', 'block');
+                    $('.descBox_title span').css('display', 'block');
                     //将价钱重新赋值
                     $('.descBox_title .db_prize').html(data.price);
-                }else{
+                } else {
                     $('.descBox_title').removeClass('fixed');
-                    $('.descBox_title .fixedBtn').css('display','none');
-                    $('.descBox_title span').css('display','none');
+                    $('.descBox_title .fixedBtn').css('display', 'none');
+                    $('.descBox_title span').css('display', 'none');
                 }
             })
         }
@@ -129,7 +129,7 @@
         })
 
         // 左键
-        this.preBtn.on('click',function(){
+        this.preBtn.on('click', function () {
             _this.leftmove();
         });
 
@@ -172,11 +172,11 @@
     }
 
     // 左键移动
-    Fangda.prototype.leftmove=function(){
-        if(this.num>4){
+    Fangda.prototype.leftmove = function () {
+        if (this.num > 4) {
             this.num--;
             this.ulList.animate({
-                left:-this.liWidth*(this.num-4)
+                left: -this.liWidth * (this.num - 4)
             });
         }
     }
@@ -196,17 +196,17 @@
         }
     }
 
-    $('.addToCart').on('click',function(){
-        let $sid=$(this).parents('.goodsBox_info').prev().find('#spic').find('img').attr('sid');
+    $('.addToCart').on('click', function () {
+        let $sid = $(this).parents('.goodsBox_info').prev().find('#spic').find('img').attr('sid');
         // console.log($sid);
         cookieToArray();//获取已经存在的cookie值。
-        if($.inArray($sid,sidarr)!==-1){//商品存在，数量叠加 
+        if ($.inArray($sid, sidarr) !== -1) {//商品存在，数量叠加 
             var num = parseInt(numarr[$.inArray($sid, sidarr)]) + parseInt($('.count input').val());
-			numarr[$.inArray($sid, sidarr)] = num;
+            numarr[$.inArray($sid, sidarr)] = num;
             addcookie('cookienum', numarr.toString(), 10); //数组存入cookie
-        }else{//不存在，第一次添加。将商品的id和数量存入数组，再存入cookie.
+        } else {//不存在，第一次添加。将商品的id和数量存入数组，再存入cookie.
             sidarr.push($sid);//将当前的id存入数组
-            addcookie('cookiesid',sidarr.toString(),10);//数组存入cookie
+            addcookie('cookiesid', sidarr.toString(), 10);//数组存入cookie
             numarr.push($('.count input').val());
             addcookie('cookienum', numarr.toString(), 10); //数组存入cookie
         }
@@ -215,26 +215,37 @@
 
     //5.加减商品数量
     //减
-    $('.count .c_sub').on('click',function(){
-        if($(this).next().val()>1){
-            $(this).next().val($(this).next().val()-1);
-        }else{
+    $('.count .c_sub').on('click', function () {
+        if ($(this).next().val() > 1) {
+            $(this).next().val($(this).next().val() - 1);
+        } else {
             alert('商品数量不能小于1');
         }
     });
     //加
-    $('.count .c_add').on('click',function(){
-        if($(this).prev().val()<20){
-            $(this).prev().val(parseInt($(this).prev().val())+1);
-        }else{
+    $('.count .c_add').on('click', function () {
+        if ($(this).prev().val() < 20) {
+            $(this).prev().val(parseInt($(this).prev().val()) + 1);
+        } else {
             alert('商品数量达到上限');
         }
     })
     // 判断商品的数量是否大于20
-    $('.count input').on('blur',function(){
-        if($('.count input').val()>20){
-            alert('商品数量达到上限,请重新选择');
-            $('.count input').val(1);
+    $('.count input').on('blur', function () {
+        let reg = /^\D$/;
+        if (reg.test($(this).val())) {
+            alert('请输入数字');
+            $(this).val(1);
+        } else {
+            if ($('.count input').val() > 20) {
+                alert('商品数量达到上限,请重新选择');
+                $('.count input').val(1);
+            }else if($('.count input').val() < 1){
+                alert('商品数量不能少于1,请重新选择');
+                $('.count input').val(1);
+            }
         }
-    })
+
+    });
+
 }(jQuery)
